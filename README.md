@@ -158,7 +158,7 @@ Set the environment variable as:
 $ export TF_VAR_github_token=${your-github-pat}
 ```
 
-which will be referenced in `infra/aws/eu-west-1/production/locals.tf`:
+which will be referenced in `infra/aws/us-east-1/production/locals.tf`:
 
 ```
 # locals.tf
@@ -167,7 +167,7 @@ locals {
 }
 ```
 
-Other variables that needs replacement resides in `infra/aws/eu-west-1/production/variables.tf`:
+Other variables that needs replacement resides in `infra/aws/us-east-1/production/variables.tf`:
 
 ```
 variable "aws_region" {}
@@ -203,8 +203,8 @@ variable "vpc_name" {}
 ```
 
 Also ensure your configuration matches your setup in:
-- `infra/aws/eu-west-1/production/providers.tf`
-- `infra/aws/eu-west-1/production/terraform-state.tf`
+- `infra/aws/us-east-1/production/providers.tf`
+- `infra/aws/us-east-1/production/terraform-state.tf`
 
 ## Notes
 
@@ -298,14 +298,14 @@ Releasing state lock. This may take a few moments...
 Outputs:
 
 account_id = "xxxxxxxxxxxx"
-alb_dns = "ecs-prod-alb-xxxxxxxxxx.eu-west-1.elb.amazonaws.com"
+alb_dns = "ecs-prod-alb-xxxxxxxxxx.us-east-1.elb.amazonaws.com"
 caller_arn = "arn:aws:iam::xxxxxxxxxxxx:user/x"
 caller_user = "AXXXXXXXXXXXXXXXXXXXXXX"
-db_address = "ecs-prod-rds-instance.xxxxxxxxxxxx.eu-west-1.rds.amazonaws.com"
+db_address = "ecs-prod-rds-instance.xxxxxxxxxxxx.us-east-1.rds.amazonaws.com"
 environment_name = "prod"
 service_hostname = "www.rbkr.xyz"
 
-~/aws-terraform-cicd-java-springboot/infra/aws/eu-west-1/production main* 4m 24s
+~/aws-terraform-cicd-java-springboot/infra/aws/us-east-1/production main* 4m 24s
 ```
 
 Now that your infrastructure is built, we can trigger our repo to start the pipeline:
