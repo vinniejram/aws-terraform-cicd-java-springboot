@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -24,6 +25,9 @@ public class CarController {
 
     @PostMapping("/cars")
     public Car createCar(@Valid @RequestBody Car car) {
+        Date currentTime = new Date();
+        car.setCreatedAt(currentTime);
+        car.setUpdatedAt(currentTime);
         return carRepository.save(car);
     }
 
@@ -39,6 +43,8 @@ public class CarController {
         Car car = carRepository.findById(carId).orElseThrow(() -> new ResourceNotFoundException("Car", "id", carId));
         car.setMake(carDetails.getMake());
         car.setModel(carDetails.getModel());
+        Date currentTime = new Date();
+        car.setUpdatedAt(currentTime);
         Car updatedCar = carRepository.save(car);
         
         return updatedCar;
