@@ -94,7 +94,7 @@ variable "service_hostname" {
 
 variable "codestar_connection_id" {
   type    = string
-  default = ""
+  default = "176dc63f-5bfd-448e-ad95-ce38e9055e25"
 }
 
 variable "codebuild_docker_image" {
