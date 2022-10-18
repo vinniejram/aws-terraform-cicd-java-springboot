@@ -142,7 +142,7 @@ For AWS, I have the current existing resources, which I will reference in terraf
 
 ### codestar connections 
 - codestar connection linked to my github account:
-- https://eu-west-1.console.aws.amazon.com/codesuite/settings/connections
+- https://us-east-1.console.aws.amazon.com/codesuite/settings/connections
 - the connection id is defined in: var.codestar_connection_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
 ## Required Environment Variables
