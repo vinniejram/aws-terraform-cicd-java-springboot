@@ -11,15 +11,15 @@ variable "worker_ami" {
 variable "subnets" {
     default = [
     {
-      az     = "us-east-2a",
+      az     = "us-east-1a",
       prefix = "10.1.1.0/24"
     },
     {
-      az     = "us-east-2b",
+      az     = "us-east-1b",
       prefix = "10.1.2.0/24"
     },
     {
-      az     = "us-east-2c",
+      az     = "us-east-1c",
       prefix = "10.1.3.0/24"
     }
   ]
