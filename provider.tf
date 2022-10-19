@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "aston-lecture.springboot.simple-tf-remote-state"
+    bucket = "aws-terraform-cicd-java-springboot-deploy-bucket"
     key    = "terraform.tfstate"
     region = "us-east-1"
   }
