@@ -9,9 +9,9 @@ aws s3 cp s3://${var.artifact_bucket}/${var.application_version} ./ --recursive
 sudo java -jar *.jar
 EOF
 
-  security_groups = [aws_security_group.application_server_security_group.id]
+  #security_groups = [aws_security_group.application_server_security_group.id]
 
-  key_name = "testinstance-rsa"
+  #key_name = "testinstance-rsa"
 
 
 
