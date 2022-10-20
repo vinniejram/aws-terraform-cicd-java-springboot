@@ -1,7 +1,7 @@
 module "cargarage" {
     source = "./deployment"
     application_name = "cargarage"
-    application_version = "ea26446"
+    application_version = "58d4ec8"
     artifact_bucket = "aws-terraform-cicd-java-springboot-deploy-bucket"
     worker_ami = "ami-01c907a9b51818bd9"
     instance_profile = "allow_s3_ec2_github_demo"
